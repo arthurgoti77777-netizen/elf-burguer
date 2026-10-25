@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Elf Bar & Burger – Sabor que encanta, momentos que ficam</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b100a;--bg2:#121a0e;--card:#16200f;--gold:#e0b550;--gold2:#f6d98a;--green:#7bb03a;--text:#efe6cf;--mute:#b8ad8e;--line:rgba(224,181,80,.28);--fire:#e8572a;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root[data-theme="dark"]{--bg:#0b100a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b100a}}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Lora,Georgia,serif;line-height:1.6;overflow-x:hidden}
+h1,h2,h3{font-family:Cinzel,Georgia,serif;margin:0}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:20;background:rgba(11,16,10,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+.logo{font-family:'Cinzel Decorative',serif;font-weight:900;color:var(--gold);font-size:1.3rem;letter-spacing:.05em}
+nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;font-family:Cinzel,serif;font-size:.85rem}
+nav ul a:hover{color:var(--gold2)}
+.btn{display:inline-block;font-family:Cinzel,serif;font-weight:700;letter-spacing:.06em;padding:13px 26px;border-radius:4px;border:1px solid var(--gold);background:linear-gradient(180deg,var(--gold2),var(--gold) 55%,#b08a2c);color:#1a1405;box-shadow:0 0 22px rgba(224,181,80,.3);transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 0 34px rgba(224,181,80,.55)}
+.btn.ghost{background:transparent;color:var(--gold2);box-shadow:none}
+@media(max-width:700px){nav ul{display:none}}
+/* hero */
+.hero{position:relative;text-align:center;padding:70px 0 0;background:radial-gradient(ellipse at 50% 20%,#1d2e12 0,var(--bg) 70%);overflow:hidden}
+.stars{position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(1.5px 1.5px at 12% 20%,#fff8,transparent),radial-gradient(1.5px 1.5px at 80% 14%,#fff8,transparent),radial-gradient(2px 2px at 65% 35%,var(--gold2),transparent),radial-gradient(1.5px 1.5px at 30% 45%,#fff6,transparent),radial-gradient(2px 2px at 90% 50%,var(--gold2),transparent),radial-gradient(1.5px 1.5px at 8% 60%,#fff6,transparent);animation:tw 4s ease-in-out infinite alternate}
+@keyframes tw{to{opacity:.4}}
+.badge{display:inline-block;border:1px solid var(--line);padding:4px 16px;border-radius:30px;font-family:Cinzel,serif;font-size:.78rem;letter-spacing:.18em;color:var(--gold)}
+.hero h1{font-family:'Cinzel Decorative',serif;font-weight:900;font-size:clamp(4.5rem,18vw,10rem);line-height:1;margin:14px 0 0;background:linear-gradient(180deg,var(--gold2),var(--gold) 50%,#8a6a1c);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 4px 24px rgba(224,181,80,.35))}
+.hero .sub{font-family:Cinzel,serif;letter-spacing:.35em;color:var(--gold);font-size:clamp(.9rem,3vw,1.3rem);margin-top:-4px}
+.hero p.lead{max-width:560px;margin:22px auto 26px;color:var(--mute);font-size:1.1rem;font-style:italic;padding:0 20px}
+.cta{position:relative;z-index:3;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;padding:0 20px}
+.scene{position:relative;height:260px;margin-top:20px}
+.scene svg{position:absolute;bottom:0;left:0;width:100%;height:100%}
+.burger{position:absolute;left:50%;bottom:-6px;transform:translateX(-50%);width:230px;animation:fl 4s ease-in-out infinite;filter:drop-shadow(0 10px 25px rgba(232,87,42,.4))}
+@keyframes fl{50%{transform:translateX(-50%) translateY(-10px)}}
+.steam{position:absolute;left:50%;bottom:150px;width:3px;height:40px;background:linear-gradient(transparent,#fff5);border-radius:3px;animation:st 3s infinite;opacity:0}
+.steam:nth-of-type(2){margin-left:-26px;animation-delay:1s}.steam:nth-of-type(3){margin-left:28px;animation-delay:2s}
+@keyframes st{0%{opacity:0;transform:translateY(20px)}40%{opacity:.8}100%{opacity:0;transform:translateY(-30px) scaleX(2)}}
+@media(max-width:700px){.scene{height:230px}.wrap{padding:0 16px}section{padding:48px 0}.hero{padding-top:44px}.hero p.lead{font-size:1rem;margin:16px auto 22px}.badge{font-size:.62rem;letter-spacing:.1em}.logo{font-size:1.15rem}.cta .btn{width:100%;max-width:300px;text-align:center}.burger{width:190px}.stats{grid-template-columns:repeat(3,1fr);gap:8px}.stat{padding:16px 4px}.stat b{font-size:1.3rem}.stat span{font-size:.75rem}.about{margin-top:34px;gap:26px}.ring{max-width:230px}.ring b{font-size:4rem}.tabs{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;margin:0 -16px 24px;padding:0 16px 8px;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}.tab{white-space:nowrap;flex:none}.grid{grid-template-columns:1fr}.item{padding:14px}.item h3{font-size:.95rem}.chal{padding:32px 16px}.rules div{flex:1 1 90px;padding:10px;font-size:.8rem}.box{padding:20px}.box .btn{display:block;text-align:center;margin-bottom:10px}.fab{padding:11px 16px;font-size:.85rem}footer{padding-bottom:90px}}
+/* sections */
+section{padding:72px 0}
+.title{text-align:center;margin-bottom:38px}
+.title small{font-family:Cinzel,serif;color:var(--green);letter-spacing:.3em;font-size:.78rem}
+.title h2{font-family:'Cinzel Decorative',serif;color:var(--gold);font-size:clamp(1.7rem,5vw,2.6rem);margin-top:6px}
+.title .orn{color:var(--gold);opacity:.7;margin-top:6px;letter-spacing:.5em}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+.stat{text-align:center;border:1px solid var(--line);background:var(--bg2);padding:22px 10px;border-radius:6px}
+.stat b{display:block;font-family:Cinzel,serif;font-size:2rem;color:var(--gold2)}
+.stat span{color:var(--mute);font-size:.9rem}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center;margin-top:50px}
+@media(max-width:760px){.about{grid-template-columns:1fr}}
+.about p{color:var(--mute);font-size:1.05rem}
+.about q{display:block;font-style:italic;color:var(--gold2);font-size:1.25rem;margin-top:14px;quotes:none;border-left:3px solid var(--gold);padding-left:14px}
+.ring{aspect-ratio:1;max-width:300px;margin:auto;border-radius:50%;border:2px solid var(--gold);display:grid;place-items:center;text-align:center;background:radial-gradient(circle,#1c2c11,var(--bg2));box-shadow:0 0 0 8px var(--bg),0 0 0 9px var(--line),0 0 50px rgba(123,176,58,.2)}
+.ring b{font-family:'Cinzel Decorative',serif;font-size:5rem;color:var(--gold2);line-height:1;display:block}
+.ring span{font-family:Cinzel,serif;color:var(--gold);letter-spacing:.2em;font-size:.85rem}
+.ring>div{max-width:66%;display:flex;flex-direction:column;align-items:center}
+.ring .sm{display:block;margin-top:10px;padding-top:10px;border-top:1px solid var(--line);font-size:.6rem;letter-spacing:.1em;line-height:1.5;color:var(--mute)}
+/* menu */
+#cardapio{background:linear-gradient(var(--bg),var(--bg2) 15%,var(--bg2) 85%,var(--bg))}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:30px}
+.tab{font-family:Cinzel,serif;font-weight:700;font-size:.85rem;letter-spacing:.05em;padding:9px 18px;border-radius:30px;border:1px solid var(--line);background:transparent;color:var(--text);cursor:pointer}
+.tab.on{background:var(--gold);color:#1a1405;border-color:var(--gold)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.item{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:16px 18px;position:relative;transition:transform .2s,border-color .2s}
+.item:hover{transform:translateY(-3px);border-color:var(--gold)}
+.item .top{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.item h3{font-size:1rem;color:var(--gold2)}
+.item .pr{font-family:Cinzel,serif;font-weight:700;color:var(--gold);white-space:nowrap}
+.item p{margin:6px 0 0;color:var(--mute);font-size:.9rem}
+.tag{position:absolute;top:-9px;right:12px;background:var(--fire);color:#fff;font-family:Cinzel,serif;font-size:.65rem;letter-spacing:.1em;padding:2px 10px;border-radius:20px}
+.note{text-align:center;color:var(--mute);font-size:.82rem;margin-top:22px}
+/* challenge */
+.chal{background:radial-gradient(ellipse at 50% 0,#274016,var(--bg2) 70%);border:2px solid var(--gold);border-radius:10px;padding:44px 24px;text-align:center;position:relative}
+.chal h2{font-family:'Cinzel Decorative',serif;font-size:clamp(2rem,7vw,3.4rem);color:var(--gold2)}
+.chal h2 em{color:var(--green);font-style:normal}
+.chal .big{font-size:1.2rem;margin:10px 0 22px}
+.rules{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:26px}
+.rules div{border:1px solid var(--line);padding:12px 18px;border-radius:6px;background:#0006;font-family:Cinzel,serif;font-size:.9rem}
+.rules div b{display:block;color:var(--green);font-size:1.4rem}
+.price{display:inline-grid;place-items:center;width:104px;height:104px;border-radius:50%;background:var(--gold);color:#1a1405;font-family:Cinzel,serif;font-weight:900;font-size:1.7rem;margin-bottom:20px;box-shadow:0 0 30px rgba(224,181,80,.5)}
+.price small{font-size:.7rem;display:block;margin-bottom:-14px;margin-top:-6px}
+/* reviews */
+.rev{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.rv{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:22px}
+.rv .st{color:var(--gold);letter-spacing:.15em}
+.rv p{color:var(--mute);margin:8px 0 0;font-style:italic}
+.score{text-align:center;margin-bottom:26px}
+.score b{font-family:Cinzel,serif;font-size:3.4rem;color:var(--gold2)}
+.score div{color:var(--gold);letter-spacing:.2em}
+.score span{color:var(--mute);font-size:.9rem}
+/* visit */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+@media(max-width:760px){.visit{grid-template-columns:1fr}}
+.box{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:26px}
+.box h3{color:var(--gold);margin-bottom:12px}
+.box p{margin:8px 0;color:var(--mute)}
+.box p b{color:var(--text)}
+footer{border-top:1px solid var(--line);padding:34px 0 90px;text-align:center;color:var(--mute);font-size:.88rem}
+footer .logo{display:block;margin-bottom:8px}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:30;background:#25a244;color:#fff;font-family:Cinzel,serif;font-weight:700;padding:13px 20px;border-radius:40px;box-shadow:0 6px 24px #0008}
+.reveal{opacity:0;transform:translateY(24px);transition:.7s}.reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a class="logo" href="#topo">ELF</a>
+<ul><li><a href="#historia">História</a></li><li><a href="#cardapio">Cardápio</a></li><li><a href="#desafio">Desafio</a></li><li><a href="#avaliacoes">Avaliações</a></li><li><a href="#visita">Visite</a></li></ul>
+<a class="btn" style="padding:8px 16px;font-size:.8rem" href="https://wa.me/551123646438" target="_blank" rel="noopener">PEDIR</a></div></nav>
+
+<header class="hero" id="topo">
+<div class="stars"></div>
+<span class="badge">✦ BAR &amp; BURGER · DESDE 16/11/2010 ✦</span>
+<h1>ELF</h1>
+<div class="sub">BAR &amp; BURGER</div>
+<p class="lead">Hambúrgueres robustos, pão verde de elfo e uma taverna de fantasia no coração do Jardim Santo Elias. Prepare o apetite, aventureiro.</p>
+<div class="cta"><a class="btn" href="https://wa.me/551123646438" target="_blank" rel="noopener">⚔ Faça seu pedido</a><a class="btn ghost" href="#cardapio">Ver o cardápio</a></div>
+<div class="scene">
+<svg viewBox="0 0 1000 260" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><g fill="#0f1c0a"><path d="M0 260V150l30-90 30 90 20-50 30 80 25-60 35 90 40-120 40 120 30-70 40 90 30-60V260z"/><path d="M1000 260V140l-30-80-30 80-20-40-30 80-25-50-35 90-40-110-40 110-30-60-40 80-30-50V260z"/></g><g fill="#080d06"><path d="M130 260V170l25-80 25 80 18-40 25 70 20-50 30 110z"/><path d="M870 260V170l-25-80-25 80-18-40-25 70-20-50-30 110z"/></g></svg>
+<span class="steam"></span><span class="steam"></span><span class="steam"></span>
+<svg class="burger" viewBox="0 0 200 150" aria-label="Hambúrguer Elf com pão verde"><ellipse cx="100" cy="140" rx="90" ry="9" fill="#0007"/><path d="M14 112q0-18 86-18t86 18q0 16-86 16T14 112z" fill="#6aa12e"/><path d="M12 96q-4 12 10 16l156-2q14-4 10-14z" fill="#e8572a"/><path d="M10 88h180q0 14-24 22l-12-10-14 12-16-12-18 12-18-12-18 12-16-12-14 12-12-10q-26-8-26-22z" fill="#f5a623"/><rect x="14" y="70" width="172" height="22" rx="11" fill="#4a2312"/><path d="M12 58q8-10 20-4t22-2 22 4 22-4 22 4 22-4 22 4 22-4q10 0 14 6v8H12z" fill="#7bb03a"/><path d="M100 6C46 6 14 34 14 62h172C186 34 154 6 100 6z" fill="#7bb03a"/><path d="M100 6C46 6 14 34 14 62h172C186 34 154 6 100 6z" fill="url(#g)"/><defs><radialGradient id="g" cx=".35" cy=".25"><stop offset="0" stop-color="#cfe89a" stop-opacity=".55"/><stop offset="1" stop-color="#2f5a10" stop-opacity=".4"/></radialGradient></defs><g fill="#e9f2c8"><ellipse cx="60" cy="30" rx="6" ry="3"/><ellipse cx="96" cy="20" rx="6" ry="3"/><ellipse cx="132" cy="32" rx="6" ry="3"/><ellipse cx="82" cy="44" rx="6" ry="3"/><ellipse cx="116" cy="48" rx="6" ry="3"/></g></svg>
+</div>
+</header>
+
+<section id="historia"><div class="wrap">
+<div class="stats reveal"><div class="stat"><b>4,4 ★</b><span>nota no Google</span></div><div class="stat"><b>3.273</b><span>avaliações</span></div><div class="stat"><b>16 anos</b><span>de história</span></div></div>
+<div class="about reveal">
+<div><div class="title" style="text-align:left;margin-bottom:14px"><small>NOSSA LENDA</small><h2>Uma taverna élfica em SP</h2></div>
+<p>Desde 2010, a Elf é a lanchonete descontraída onde a fantasia encontra a chapa quente. Hambúrgueres enormes, beirutes recheados, batatas crocantes e o famoso pão verde, tudo servido num ambiente temático e acolhedor, com sacada coberta.</p>
+<p>Para comer no local, levar para viagem ou pedir em casa, a missão é sempre a mesma.</p>
+<q>Sabor que encanta, momentos que ficam.</q></div>
+<div class="ring"><div><b>16</b><span>ANOS</span><span class="sm">FAZENDO PARTE DA SUA HISTÓRIA</span></div></div>
+</div></div></section>
+
+<section id="cardapio"><div class="wrap">
+<div class="title reveal"><small>O GRIMÓRIO DE SABORES</small><h2>Cardápio</h2><div class="orn">❦ ❦ ❦</div></div>
+<div class="tabs" id="tabs"></div>
+<div class="grid" id="grid"></div>
+<p class="note">Valores conforme cardápio da casa, sujeitos a alteração. Confirme ao fazer seu pedido.</p>
+</div></section>
+
+<section id="desafio"><div class="wrap"><div class="chal reveal">
+<small style="font-family:Cinzel,serif;letter-spacing:.3em;color:var(--green)">APENAS PARA OS MAIS VALENTES</small>
+<h2>DESAFIO <em>ELF</em></h2>
+<p class="big">Coma <b>5 × Salada Bacon Egg</b> no pão verde, com cheddar.</p>
+<div class="rules"><div><b>40 min</b>para comer</div><div><b>Sem sair</b>da mesa</div><div><b>Grátis</b>se comer tudo</div></div>
+<div class="price"><span><small>R$</small>80</span></div><br>
+<a class="btn" href="https://wa.me/551123646438" target="_blank" rel="noopener">Aceitar o desafio</a>
+<p class="note">Desafio individual.</p>
+</div></div></section>
+
+<section id="avaliacoes"><div class="wrap">
+<div class="title reveal"><small>O QUE DIZEM OS AVENTUREIROS</small><h2>Avaliações</h2></div>
+<div class="score reveal"><b>4,4</b><div>★★★★☆</div><span>3.273 avaliações no Google</span></div>
+<div class="rev reveal">
+<div class="rv"><div class="st">★★★★★</div><h3 style="font-size:1rem;margin-top:6px">Hambúrgueres enormes</h3><p>Deliciosos, saborosos e fartos, com acompanhamentos como batata frita e milkshake.</p></div>
+<div class="rv"><div class="st">★★★★★</div><h3 style="font-size:1rem;margin-top:6px">Ambiente temático</h3><p>Confortável, com decoração de fantasia e sacada coberta para curtir com calma.</p></div>
+<div class="rv"><div class="st">★★★★☆</div><h3 style="font-size:1rem;margin-top:6px">Bom atendimento</h3><p>Equipe atenciosa e estacionamento pago disponível. Em horários de pico, o preparo pode demorar.</p></div>
+</div>
+<p class="note">Resumo dos comentários dos frequentadores no Google Maps.</p>
+</div></section>
+
+<section id="visita" style="background:var(--bg2)"><div class="wrap">
+<div class="title reveal"><small>ENCONTRE A TAVERNA</small><h2>Visite a Elf</h2></div>
+<div class="visit reveal">
+<div class="box"><h3>📍 Onde estamos</h3><p><b>Av. Elísio Cordeiro de Siqueira, 909</b><br>Jardim Santo Elias, São Paulo - SP<br>CEP 05136-001</p><p>🕚 Aberto hoje · <b>fecha às 23:30</b></p><p>🍽 Consumo no local · Para viagem · Entrega</p><p>🅿 Estacionamento pago</p><br>
+<a class="btn" href="https://www.google.com/maps/search/?api=1&query=Elf+Bar+e+Burger+Av.+Elisio+Cordeiro+de+Siqueira+909+Sao+Paulo" target="_blank" rel="noopener">Como chegar</a></div>
+<div class="box"><h3>📜 Faça seu pedido</h3><p>Chame no WhatsApp ou ligue:</p><p style="font-family:Cinzel,serif;font-size:1.5rem;color:var(--gold2)"><a href="tel:+551123646438" target="_blank" rel="noopener">(11) 2364-6438</a></p><p>Peça direto, sem complicação, e receba quentinho.</p><br>
+<a class="btn" href="https://wa.me/551123646438" target="_blank" rel="noopener">Pedir no WhatsApp</a> <a class="btn ghost" href="tel:+551123646438" target="_blank" rel="noopener" onclick="try{navigator.clipboard.writeText('(11) 2364-6438');this.textContent='Número copiado!';var s=this;setTimeout(function(){s.textContent='Ligar'},2500)}catch(e){}">Ligar</a></div>
+</div></div></section>
+
+<footer><div class="wrap"><span class="logo">ELF BAR &amp; BURGER</span>Sabor que encanta, momentos que ficam.<br>Desde 16/11/2010 · São Paulo, SP</div></footer>
+<a class="fab" href="https://wa.me/551123646438" target="_blank" rel="noopener">💬 Pedir agora</a>
+
+<script>
+var M={
+"Especiais":[
+["X Picanha Nachos","27,90","Picanha 150g, cheddar especial, molho madeira, alface, maionese, picles, nachos e tomate. Com porção de nachos.","TOP"],
+["X Picanha Duplo","31,90","2 hambúrgueres de picanha 150g, tomate, maionese Elf, cheddar e cebolinha no pão preto.","TOP"],
+["X Picanha Temperada","25,90","Picanha 150g, maionese de alho, queijo, muçarela, bacon, vinagrete e alface crespa.","TOP"],
+["Onion Elf","26,90","Picanha, queijo prato, alface, tomate, bacon, maionese Elf e anéis de cebola no pão de hambúrguer."],
+["Mignon Filetado","32,00","Filé mignon filetado, cream cheese, muçarela de búfala, tomate seco, cebola, rúcula e molho madeira, no pão preto."],
+["X Picanha Champignon","22,90","Picanha 150g, queijo prato e champignon no pão de hambúrguer."],
+["X Picanha Curry","26,90","Picanha 150g, maionese, curry, queijo prato, cream cheese, tomate e alface americana."],
+["Triplo Cheddar","27,90","3 hambúrgueres bovino 120g, cheddar e bacon no pão preto."]],
+"Burgers da Casa":[
+["Grande Elf","32,90","2 hambúrgueres de fraldinha 200g, maionese de 3 queijos, cream cheese e bacon no pão verde.","PÃO VERDE"],
+["Matador","37,00","Hambúrguer de picanha 250g, queijo prato, bacon, molho especial, burrata, parmesão, molho rosé, cebola crua e picles no pão pretzel."],
+["Monster","38,00","Hambúrguer de fraldinha 250g, bacon, ovo, presunto, cheddar, queijo prato, tomate, alface, cebola crua e maionese Elf."],
+["Especial Shimeji","29,50","Hambúrguer de picanha 150g, shimeji temperado com cebolinha, passado na manteiga e shoyu, cream cheese no pão branco."],
+["Gourmet Elf","27,00","Hambúrguer de filé mignon, queijo prato, cheddar, alface a julienne, cebola crua, molho madeira e pão branco, com gergelim."],
+["Bravíssimo","28,00","Filé mignon, bacon, queijo provolone, vinagrete, azeitona e maionese de alho no pão francês."],
+["Especial Fraldinha","26,90","Hambúrguer especial de fraldinha 200g, cream cheese, maionese Elf, tomate e alface americana."],
+["Especial Picanha","26,00","Hambúrguer de picanha 150g, molho rosé, tomate, rúcula, bacon, queijo e cream cheese no pão de hambúrguer."]],
+"Clássicos":[
+["Hambúrguer","13,90","Hambúrguer no pão de hambúrguer."],
+["Cheese Burger","14,90","Hambúrguer, queijo prato e pão de hambúrguer."],
+["Cheese Salada","18,90","Hambúrguer, queijo prato, alface, tomate e maionese Elf."],
+["Cheese Salada Bacon","21,90","Hambúrguer, queijo prato, bacon, alface, tomate e maionese Elf."],
+["Cheese Salada Bacon Egg","23,90","Hambúrguer, queijo prato, bacon, ovo, alface, tomate e maionese Elf."],
+["Cheddar Cebola Frita","21,90","Hambúrguer, queijo cheddar e cebola frita no pão de hambúrguer com gergelim."],
+["Pic Barbecue","24,90","Hambúrguer de picanha 150g, queijo, molho barbecue, cebola frita e maionese Elf."],
+["Capitão Elf","25,90","150g de hambúrguer de picanha, queijo, molho especial Elf, cebola crua, alface a julienne no pão de hambúrguer."]],
+"Beirutes":[
+["Beirute Picanha Filetada","62,90","Catupiry, bacon, alface, tomate, queijo prato, orégano e maionese Elf verde (300g)."],
+["Big X Frango","58,90","Filé de frango picadinho, catupiry, queijo prato, bacon, cebola crocante, alface, tomate e maionese Elf (300g)."],
+["Roast Beef","59,90","Roast beef fatiado, muçarela de búfala, queijo canastra, cheddar, alface, tomate e maionese Elf (300g)."],
+["Elf Furioso Calabresa","58,90","Calabresa de metro, catupiry sabor pimenta jalapeña, provolone, queijo canastra, vinagrete, molho tártaro. Picante.","🌶"],
+["Super Elf","65,90","Mignon filetado, queijo canastra, cream cheese, bacon, tomate seco, rúcula e maionese Elf verde (300g)."],
+["Beirutes tradicionais","49,90","Filé de frango, filé mignon, contra filé, calabresa, roast beef ou hambúrguer 200g. Acompanham queijo, presunto, ovo, bacon, alface, tomate e maionese Elf verde."]],
+"Dogs, Kids e Saladas":[
+["Dog Elf","13,90","Salsicha, maionese Elf, vinagrete e batata palha."],
+["Dog Champignon","14,90","Pão de dog, salsicha, molho rosé, catupiry, bacon e champignon."],
+["Kids Hamburguinho","21,90","3 hambúrgueres de 30g, queijo cheddar ou catupiry. Acompanha batata canoa."],
+["Mini X Salada no pão verde","14,90","Acompanha fritas."],
+["Caesar Salad","21,90","Alface americana, molho, parmesão e filé de frango."],
+["Salada Mista","14,90","Alface americana, tomate, cebola, rúcula e palmito."]],
+"Acompanhamentos":[
+["Fritas Individual","5,00","Batata frita crocante."],
+["½ Fritas Elf","19,90","Meia porção especial da casa."],
+["Filet de Frango","5,00","Porção de filezinho de frango."],
+["Bife de Contra Filet","10,00","Acompanhamento para o lanche."],
+["Bacon / Cheddar / Catupiry","4,00","Adicione ao seu lanche."],
+["Molho Especial Elf","3,00","Maionese Elf, molho especial e pomodoro."]]
+};
+var tabs=document.getElementById('tabs'),grid=document.getElementById('grid'),keys=Object.keys(M);
+function show(k){
+  [].forEach.call(tabs.children,function(b){b.classList.toggle('on',b.textContent===k)});
+  grid.innerHTML=M[k].map(function(i){return '<div class="item">'+(i[3]?'<span class="tag">'+i[3]+'</span>':'')+'<div class="top"><h3>'+i[0]+'</h3><span class="pr">R$ '+i[1]+'</span></div><p>'+i[2]+'</p></div>'}).join('');
+}
+keys.forEach(function(k){var b=document.createElement('button');b.className='tab';b.textContent=k;b.onclick=function(){show(k)};tabs.appendChild(b)});
+show(keys[0]);
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.getElementById(a.getAttribute('href').slice(1));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}})});
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('in')})},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>
